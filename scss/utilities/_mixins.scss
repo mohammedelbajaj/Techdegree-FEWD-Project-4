@@ -22,4 +22,12 @@
       }             
     }  
   }
-  
+
+// Buttons
+@mixin button-hover($rule, $color, $amount) {
+  $rule {
+    &:hover {
+      background-color: darken($color, $amount);
+    }
+  }
+}
