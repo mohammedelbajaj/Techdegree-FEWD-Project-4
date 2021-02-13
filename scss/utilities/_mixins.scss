@@ -25,9 +25,11 @@
 
 // Buttons
 @mixin button-hover($rule, $color, $amount) {
-  $rule {
+  #{$rule} {
     &:hover {
-      background-color: darken($color, $amount);
+      background-color: lighten($color, $amount);
+      transition: width 2s linear 1s;
     }
   }
+  @content;
 }
